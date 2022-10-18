@@ -1,0 +1,50 @@
+### Create 3 new dojos ###
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Austin", NOW(), NOW()), ("Dallas", NOW(), NOW()), ("Houston", NOW(), NOW())
+
+### Delete your dojos ###
+DELETE FROM dojos WHERE id > 0
+
+### Create 3 more dojos ###
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Austin", NOW(), NOW()), ("Dallas", NOW(), NOW()), ("Houston", NOW(), NOW())
+
+### Add 3 ninjas to the first dojo ###
+SELECT * FROM ninjas;
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Thor", "Odinson", 31, NOW(), NOW(), 4), ("Doctor", "Strange", 22, NOW(), NOW(), 4), ("Tony", "Stark", 29, NOW(), NOW(), 4)
+
+### Add 3 more ninjas to the second dojo ###
+SELECT * FROM ninjas;
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Clint", "Barton", 35, NOW(), NOW(), 5), ("Scott", "Lang", 26, NOW(), NOW(), 5), ("Peter", "Parker", 17, NOW(), NOW(), 5)
+
+### Add 3 more ninjas to the third dojo ###
+SELECT * FROM ninjas;
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Steve", "Rogers", 72, NOW(), NOW(), 6), ("Bruce", "Banner", 35, NOW(), NOW(), 6), ("Natasha", "Romanov", 26, NOW(), NOW(), 6)
+
+### Select all ninjas in the first dojo ###
+SELECT * FROM ninjas
+WHERE dojo_id = 4
+#### (vvv Solution Code vvv) ###
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = 4
+
+
+### Select all ninjas from the last dojo ###
+SELECT * FROM ninjas
+WHERE dojo_id = 6
+#### (vvv Solution Code vvv) ###
+SELECT * FROM dojos
+LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = (SELECT dojo_id FROM ninjas ORDER BY dojo_id DESC LIMIT 1)
+
+
+### Get the dojo from the last ninja ### 
+SELECT dojo_id FROM ninjas
+WHERE id = 9
+#### (vvv Solution Code vvv) ###
+SELECT * FROM dojos
+WHERE dojos.id = (SELECT dojo_id FROM ninjas ORDER BUY dojo_id DESC LIMIT 1)

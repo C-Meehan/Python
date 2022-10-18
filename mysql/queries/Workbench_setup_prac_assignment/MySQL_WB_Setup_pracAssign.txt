@@ -1,0 +1,15 @@
+SELECT name FROM NAMES
+
+INSERT INTO names (name, created_at, updated_at)
+VALUES ("Chris", NOW(), NOW())
+
+INSERT INTO names (name, created_at, updated_at)
+VALUES ("Renee", NOW(), NOW())
+
+UPDATE names.names
+SET name = "Brian"
+WHERE id = 1
+
+UPDATE names.names
+SET name = "Chris"
+WHERE id = 2
