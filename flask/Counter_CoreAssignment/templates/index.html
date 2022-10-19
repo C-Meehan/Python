@@ -1,0 +1,32 @@
+<!-- collaborated with Jang Sing -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h2>{{session['num']}} time(s)</h2>
+    </div>
+    <div class="container2">
+        <button><a href="/add">+2 to Count</a></button>
+        <button><a href="/destroy_count">RESET</a></button>
+    </div>
+    <form class="form" action="/form" method="post">
+        <div class="cont">
+            <h3>Increase Counter By:</h3>
+            <input type="number" name="Amount" placeholder="Type Amount Here...">
+        </div>
+    </form>
+    <div class="container3">
+        <h1 class="total">Total visits: {{session['visited']}}</h1>
+        <button class="resetall"><a href="/destroy_session">RESET ALL</a></button>
+    </div>
+</body>
+</html>
