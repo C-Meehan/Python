@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 0 auto;
+    padding: 20px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    color: palegoldenrod;
+    font-size: 40px;
+}
+
+.guessbox {
+    margin: 10px;
+    width: 600px;
+    height: 500px;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+button {
+    width: 200px;
+}
+
+.button {
+    margin-top: 10px;
+    height: 30px;
+    background-color: slategray;
+    color: azure;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px black;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.attempts {
+    font-size: 40px;
+    color: palegoldenrod;
+}
+
+.play_again {
+    position: absolute;
+    bottom: 70px;
+}

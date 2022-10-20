@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Can you read my mind???</h1>
+        <h2>I am thinking of a number between 1 and 100</h2>
+        <h2>Take a guess!</h2>
+        <!-- <h2 class="guessbox">Your guess</h2> -->
+        {% if 'guess' in session %}
+            {% if session['guess'] < session['num']%}
+                <h2 class="guessbox" style="background-color:red">Too Low</h2>
+            {% elif session['guess'] > session['num']%}
+                <h2 class="guessbox" style="background-color:red">Too High</h2>
+            {% else %}
+                <h2 class="guessbox" style="background-color:green">Correct!</h2>
+                <button class="button play_again"><a href="/destroy_session">Play Again?</a></button>
+            {% endif %}
+        {% endif %}
+        {% if session['guess'] != session['num'] and session['attempts'] <= 5 %}
+        <form action="/guess" method="Post">
+            <input type="number" name="guess" placeholder="Guess Number...">
+            <input type="submit" value="Submit Guess" class="button">
+        </form>
+        {% endif %}
+        <h3>{{session['num']}}</h3>
+        <!-- <h2 class="attempts">Guess Attempts: {{session['attempts']}}</h2> -->
+        {% if 'attempts' in session%}
+            {% if session['attempts'] <= 5 %}
+                <h2 class="attempts">Guess Attempts: {{session['attempts']}}</h2>
+            {% else %}
+                <h2 class="attempts">You lose: Too many attempts {{session['attempts']}}</h2>
+                <button class="button"><a href="/destroy_session">Play Again?</a></button>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
+
+
+
