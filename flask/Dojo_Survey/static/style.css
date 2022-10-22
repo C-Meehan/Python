@@ -1,0 +1,93 @@
+/* Collaborated with Jang Sing */
+* {
+    color: white;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#main_container {
+    width: 50%;
+    margin: 20px auto;
+    /* border: 2px solid black; */
+    padding: 40px 15px;
+    /* background-color: white; */
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+}
+
+.form-select {
+    width: 83%;
+    margin-left: 17%;
+    /* color: black; */
+}
+
+select option {
+    color: black;
+}
+
+.form-select:hover {
+    cursor: pointer;
+}
+
+.radioselection {
+    margin-top: 20px;
+}
+
+.form-check:hover {
+    cursor: pointer;
+}
+
+.submit_button {
+    display: flex;
+    justify-content: end;
+    /* border: solid 4px;
+    border-image-source: linear-gradient(to bottom right, #f78ae0, #6638f0);
+    border-image-slice: 4; */
+}
+
+.btn {
+    border: solid 4px;
+    border-image-source: linear-gradient(to bottom right, #f78ae0, #6638f0);
+    border-image-slice: 4;
+}
+
+#sumbit_container {
+    width: 50%;
+    margin: 20px auto;
+    /* border: 2px solid black; */
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    padding: 40px 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

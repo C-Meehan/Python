@@ -1,0 +1,80 @@
+<!-- Collaborated with Jang Sing -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Dojo Survey</title>
+</head>
+
+<body>
+    <div id="main_container">
+        <form action="/process" method="post"> 
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Your Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" name ="name">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" name = "email">
+                </div>
+            </div>
+            <select class="form-select" name ="location" aria-label="Default select example">
+                <option value="" selected>Select Dojo Location...</option>
+                <option>Burbank</option>
+                <option>San Jose</option>
+                <option>Chicago</option>
+                <option>Online</option>
+            </select>
+            <fieldset class="row mb-3 radioselection">
+                <legend class="col-form-label col-sm-2 pt-0">Favorite Language</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="language" id="gridRadios1" value="Python"
+                            checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Python
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="language" id="gridRadios2" value="Java">
+                        <label class="form-check-label" for="gridRadios2">
+                            Java
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="language" id="gridRadios2" value="Javascript">
+                        <label class="form-check-label" for="gridRadios2">
+                            Javascript
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Do you wish to subscribe to Dojo newsletter?
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Comment (optional)</label>
+                <textarea class="form-control" name ="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="submit_button"><button type="submit" class="btn btn-primary">Submit</button></div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDEX</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    #head{
+      text-align: center;
+      color: {{color}};
+      background-color: {{color2}};
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- <h1 id="head" style="background-color: {{bannerColor}}; color: {{titleColor}}">Houston we have liftoff</h1> -->
+    <h1 id="head">Houston we have liftoff</h1>
+    <h2>{{phrase}}</h2>
+    <h2>{{num}}</h2>
+      {% if phrase == "Houston, we have a problem" %}
+        <p>**BOOM**</p>
+      {% else %}
+        {% for i in range(num) %}
+        <p>{{ phrase }}</p>
+        {% endfor %}
+      {% endif %}
+  </div>
+</body>
+</html>

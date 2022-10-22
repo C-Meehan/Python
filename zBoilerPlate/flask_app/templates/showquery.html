@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms Display</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div id=wrapper>
+    <header>
+        <a class=navLink href="/logout">Log Out</a>
+        <h1 id=head>Houston, We have liftoff.</h1>
+    </header>
+    <div id="displayTable">
+        <h2 class=subHead>All Users</h2>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td class="tableData">{{user.id}}</td>
+                <td class="tableData">{{user.first_name}} {{user.last_name}}</td>
+                <td class="tableData">{{user.email}}</td>
+                <td class="tableData">{{user.created_at.strftime(timeStampFormat)}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
