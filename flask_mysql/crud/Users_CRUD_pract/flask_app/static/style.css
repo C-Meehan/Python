@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add-container a {
+    display: flex;
+    justify-content: start;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.add-container {
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.show-container {
+    display: flex;
+    width: 60%;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+
+.show-container a {
+    display: flex;
+    justify-content: start;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.show-container h1 {
+    font-size: 60px;
+    margin: 10px 0px;
+}
+
+.show-info {
+    width: 80%;
+    padding: 20px;
+}
+
+.btm-links {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 20px;
+}

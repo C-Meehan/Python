@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    display: flex;
+    justify-content: start;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#add-container {
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+}
