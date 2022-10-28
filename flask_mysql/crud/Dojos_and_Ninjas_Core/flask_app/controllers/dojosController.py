@@ -18,6 +18,7 @@ def create():
     Dojo.save(data)
     return redirect('/dojos')
 
+
 @app.route('/dojos/<int:dojo_id>')
 def show(dojo_id):
     data = {

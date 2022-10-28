@@ -1,4 +1,3 @@
-import queue
 from flask_app.config.mysqlconnection import connectToMySQL
 
 class Ninja:
@@ -29,3 +28,14 @@ class Ninja:
     def delete(cls, data):
         query = "DELETE FROM ninjas WHERE ninjas.id = (%(id)s);"
         return connectToMySQL("dojos_and_ninjas_schema").query_db(query, data)
+
+    @classmethod
+    def update(cls, data):
+        query = "UPDATE ninjas SET first_name = %(first_name)s, last_name = %(last_name)s, age = %(age)s WHERE id = %(ninja_id)s;"
+        return connectToMySQL("dojos_and_ninjas_schema").query_db(query, data)
+
+    @classmethod
+    def get_one(cls, data):
+        query = "SELECT * FROM ninjas WHERE id = %(id)s;"
+        result = connectToMySQL('dojos_and_ninjas_schema').query_db(query, data)
+        return cls(result[0])
