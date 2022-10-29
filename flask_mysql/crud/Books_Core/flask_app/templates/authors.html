@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <h1>New Author</h1>
+            <form action="/create/author" method="post">
+                <div class="input-labels">
+                    <label for="first_name"> First name: </label>
+                    <input type="text" name="first_name">
+                </div>
+                <div class="input-labels">
+                    <label for="last_name">Last name: </label>
+                    <input type="text" name="last_name">
+                </div>
+                <div class="input-labels"></div>
+                <input type="submit" name="Create">
+            </form>
+        </div>
+        <div class="right-container">
+            <h1>All Authors</h1>
+            <div class="authors-container">
+                {% for a in authors%}
+                    {{a.first_name}} {{a.last_name}}
+                {% endfor %}
+            </div>
+            <a href="/books">Add Book</a>
+        </div>
+    </div>
+
+</body>
+</html>
