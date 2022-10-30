@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Users</title>
+</head>
+<body>
+    <div id="container">
+        <h1>All Users</h1>
+        <table class="table table-striped table-bordered border-dark">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in users%}
+                <tr>
+                    <td>{{u.id}}</td> 
+                    <td>{{u.first_name}} {{u.last_name}}</td>
+                    <td>{{u.email}}</td>
+                    <td>{{u.create_at}}</td>
+                    <td><a href="/show/{{u.id}}">Show | </a><a href="/edit/{{u.id}}">Edit | </a><a href="/delete/{{u.id}}">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/newuser">Add a new user</a>
+    </div>
+</body>
+</html>
