@@ -21,17 +21,17 @@
                     <input type="text" name="last_name">
                 </div>
                 <div class="input-labels"></div>
-                <input type="submit" name="Create">
+                <input class="create" type="submit" name="Create">
             </form>
         </div>
         <div class="right-container">
             <h1>All Authors</h1>
             <div class="authors-container">
                 {% for a in authors%}
-                    {{a.first_name}} {{a.last_name}}
+                    <a href="/author/show/{{a.id}}">{{a.first_name}} {{a.last_name}}</a>
                 {% endfor %}
             </div>
-            <a href="/books">Add Book</a>
+            <a href="/books"><button class="add-book">Add Book</button></a>
         </div>
     </div>
 

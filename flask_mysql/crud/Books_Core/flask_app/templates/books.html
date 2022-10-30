@@ -20,17 +20,17 @@
                     <label for="num_of_pages">Number of Pages:  </label>
                     <input type="int" name="num_of_pages">
                 </div>
-                <input type="submit" name="Create" value="Create">
+                <input  class="create" type="submit" name="Create" value="Create">
             </form>
         </div>
+        <a class="home" href="/">Home</a>
         <div class="right-container">
             <h1>All Books</h1>
             <div class="books-container">
                 {% for b in books%}
-                    {{b.title}}
+                    <a href="/book/show/{{b.id}}">{{b.title}}</a>
                 {% endfor %}
             </div>
-            <a href="/">Home</a>
         </div>
     </div>
 

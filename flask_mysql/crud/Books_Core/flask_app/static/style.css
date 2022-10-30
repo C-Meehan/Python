@@ -31,6 +31,26 @@
     margin-left: 80px;
 }
 
+.authors-container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-book {
+    width: 150px;
+    height: 35px;
+    box-shadow: 3px 3px 3px black;
+    background-color: blanchedalmond;
+}
+
+.create {
+    background-color: blanchedalmond;
+}
+
+.home {
+    font-size: 30px;
+}
 
 
 .right-container {
@@ -43,4 +63,10 @@ input {
     width: 250px;
     height: 30px;
     box-shadow: 3px 3px 3px black;
+}
+
+.books-container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
 }
