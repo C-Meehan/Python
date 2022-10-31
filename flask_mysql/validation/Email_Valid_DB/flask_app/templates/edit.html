@@ -20,11 +20,11 @@
                 {% endif %}
             {% endwith %}
             <label for="first_name">First Name: </label>
-            <input type="text" name="first_name">
+            <input type="text" name="first_name" value="{{session['first_name']}}">
             <label for="last_name">Last Name: </label>
-            <input type="text" name="last_name">
+            <input type="text" name="last_name" value="{{session['last_name']}}">
             <label for="email">Email: </label>
-            <input type="text" name="email">
+            <input disabled type="text" name="email" value="{{user.email}}">
             <input type="submit" value="Update">
         </form>
         <a href="/show/{{user.id}}">Show User</a>
