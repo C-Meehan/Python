@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>All Orders</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>Cookie Orders</h1>
+        <div class="top-line">
+            <h2>All Orders:</h2>
+            <a href="/new/order">+ New Order</a>
+        </div>
+        <table class="table  table-success table-hover table-bordered border-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Cookie Type</th>
+                    <th scope="col">Number of Boxes</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for o in orders %}
+                <tr>
+                    <th>{{o.name}}</th>
+                    <td>{{o.cookie_type}}</td>
+                    <td>{{o.num_of_boxes}}</td>
+                    <td><a href="/edit/{{o.id}}">edit</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

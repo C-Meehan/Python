@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 70%;
+    margin: 20px auto;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
+
+.top-line {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+select {
+    width: 150px;
+}
+
+.log {
+    width: 100px;
+}
