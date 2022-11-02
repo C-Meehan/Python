@@ -30,6 +30,7 @@ class User:
     def update(cls, data):
         query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s WHERE id = %(id)s;"
         return connectToMySQL("user_crud_2_schema").query_db(query, data)
+        # place email = %(email)s back into query if ability to change email in updated is desired
 
     @classmethod
     def delete(cls, data):
