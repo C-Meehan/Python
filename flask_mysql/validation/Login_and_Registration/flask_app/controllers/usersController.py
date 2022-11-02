@@ -29,7 +29,7 @@ def register():
 @app.route('/dashboard')
 def home():
     data = {
-        "id": session['id']
+        "id": session['user_id']
     }
     return render_template('dashboard.html', user=  User.get_one(data))
 

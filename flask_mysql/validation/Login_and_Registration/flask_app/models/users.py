@@ -71,3 +71,12 @@ class User:
             is_valid = False
         return is_valid
         
+    # @staticmethod
+    # def validate_login(user):
+    #     is_valid = True
+    #     query = "SELECT * FROM users WHERE email = %(email)s;"
+    #     result = connectToMySQL("users_login").query_db(query, user)
+    #     if len(result) < 1:
+
+    #         return False
+    #     return cls(result[0])
