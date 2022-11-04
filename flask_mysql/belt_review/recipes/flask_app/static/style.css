@@ -1,0 +1,142 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#main-container {
+    width: 65%;
+    margin: 0px auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: darkslategrey;
+}
+
+.left-container {
+    width: 35%;
+    padding: 10px;
+    background-color: #34393E;
+    color: white;
+    /* border: 2px solid red; */
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.left-container h1 {
+    color: #0B74EC;
+}
+
+.register-btn {
+    background-color: #0B74EC;
+    color: white;
+}
+
+.right-container {
+    width: 35%;
+    padding: 10px;
+    background-color: #34393E;
+    color: white;
+}
+
+.right-container h1 {
+    color: #28A644;
+}
+
+.login-btn {
+    background-color: #28A644;
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+}
+
+input {
+    height: 30px;
+    margin-top: 10px;
+}
+
+/* Create recipe vvvvvvvv */
+
+
+.new-recipe-container {
+    width: 70%;
+    margin: 10px auto;
+    background-color: #34393E;
+    color: white;
+}
+
+.new-form-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
+
+}
+
+.top-line {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.new-left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.new-right {
+    width: 40%;
+    border: 2px solid #0B74EC;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #0B74EC;
+    color: white;
+    box-shadow: 3px 3px 3px black;
+}
+
+textarea {
+    background-color: dimgrey;
+    color: white;
+}
+
+/* Show Recipe vvvvvv */
+
+.show-recipe-container {
+    width: 70%;
+    margin: 10px auto;
+    background-color: #34393E;
+    color: white;
+    /* border: 2px solid black; */
+}
+
+.show-mid-line {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.show-recipe-info {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #34393E; */
+    color: white;
+    border: 2px solid #0B74EC;
+}
+
+.info-categories {
+
+}
