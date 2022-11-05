@@ -1,0 +1,169 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#login-main-container {
+    width: 65%;
+    margin: 0px auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: darkslategrey;
+}
+
+.login-left-container {
+    width: 35%;
+    padding: 10px;
+    background-color: #34393E;
+    color: white;
+    /* border: 2px solid red; */
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.login-left-container h1 {
+    color: #0B74EC;
+}
+
+.register-btn {
+    background-color: #0B74EC;
+    color: white;
+}
+
+.login-right-container {
+    width: 35%;
+    padding: 10px;
+    background-color: #34393E;
+    color: white;
+}
+
+.login-right-container h1 {
+    color: #28A644;
+}
+
+.login-btn {
+    background-color: #28A644;
+    color: white;
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+}
+
+input {
+    height: 30px;
+    margin-top: 10px;
+}
+
+/* End of login.html css */
+
+#wall-main-container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #34393E;
+}
+
+.wall-nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: cadetblue;
+    color: darkslategrey;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.wall-nav h2 {
+    margin-left: 300px;
+}
+
+.logout-btn {
+    padding: 4px 8px;
+    background: transparent;
+    border-radius: 16px;
+    font-weight: 700;
+    border: 1px solid #34393E;
+    transition: all 400ms ease;
+}
+
+.logout-btn:hover {
+    background-color: #34393E;
+    color: cadetblue;
+}
+
+.logout-btn:active {
+    position: relative;
+    top: 5px;
+}
+
+.logout-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.create-post-container {
+    width: 100%;
+    margin: 30px 0px;
+    border-top: white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+textarea {
+    background-color: cadetblue;
+    color: white;
+    width: 100%;
+    height: 100px;
+    border: 2px solid white;
+    resize: none;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    background-color: #34393E;
+}
+
+.submit-btn {
+    width: 150px;
+    height: 25px;
+    background-color: cadetblue;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 2px 2px 2px cadetblue;
+}
+
+.all-posts-container {
+    width: 80%;
+    margin: 20px auto;
+    height: 500px;
+    color: white;
+}
+
+.all-posts {
+    background-color: white;
+    overflow-y: scroll;
+    color: black;
+    border: 2px solid cadetblue;
+}
+
+.post-author {
+    color: cadetblue; 
+}
+
+.post-content {
+    margin: 10px 30px
+}
+
+.post-content a {
+    margin-left: 100px;
+}
