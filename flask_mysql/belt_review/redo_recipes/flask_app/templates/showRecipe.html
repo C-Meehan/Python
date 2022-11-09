@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="show-recipe-container">
+        <div class="top-line">
+            <h1>Welcome, {{user.first_name}} </h1>
+            <a href="/homepage">back to recipes</a>
+            <a href="/logout">logout</a>
+        </div>
+        <div class="show-mid-line">
+            <h2>Recipe for {{recipe.name}}</h2>
+            <h3>Posted by: {{recipe.user.first_name}}</h3>
+        </div>
+        <div class="show-recipe-info">
+            <div class="info-categories">
+                <p>Description:</p>
+                <p>Under 30 Minutes?</p>
+                <p>Instructions:</p>
+                <p>Date Mode:</p>
+            </div>
+            <div class="recipe-info">
+                <p>{{recipe.description}}</p>
+                {% if recipe.cook_time %}
+                        <p> Yes</p>
+                    {% else %}
+                        <p> No</p>
+                    {% endif %}
+                <!-- <p>{{recipe.cook_time}}</p> -->
+                <p>{{recipe.instruction}}</p>
+                <p>{{recipe.created_at}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>All Recipes</title>
+</head>
+
+<body>
+    <div class="homepage-main-container">
+        <div class="homepage-nav">
+            <h1>Welcome, {{user.first_name}}</h1>
+            <a href="/new/recipe">+ Create</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div class="homepage-info-container">
+            <h2>All posted recipes:</h2>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Under</th>
+                        <th scope="col">Posted By</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in recipes%}
+                    <tr>
+                        <td>{{r.name}}</td>
+                        {% if r.cook_time %}
+                            <td>Yes</td>
+                        {% else %}
+                            <td>No</td>
+                        {% endif %}
+                        <td>{{r.user.first_name}}</td>
+                        {% if r.user.id == session['id']%}
+                            <td><a href="/show/recipe/{{r.id}}">View Recipe | </a><a href="/edit/recipe/{{r.id}}">Edit | </a><a href="/delete/recipe/{{r.id}}">Delete</a></td>
+                        {% else %}
+                            <td><a href="/show/recipe/{{r.id}}">View Recipe</a></td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
