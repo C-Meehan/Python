@@ -77,6 +77,12 @@ class User:
     #     query = "SELECT * FROM users WHERE email = %(email)s;"
     #     result = connectToMySQL("users_login").query_db(query, user)
     #     if len(result) < 1:
-
-    #         return False
-    #     return cls(result[0])
+    #         flash("Invalid Email/Password")
+    #         is_valid = False
+    #     # if not user_in_db:
+    #     #     flash("Invalid Email/Password")
+    #     #     is_valid = False
+    #     if not bcrypt.check_password_hash(user.password, request.form['password']):
+    #         flash("Invalid Email/Password")
+    #         is_valid = False
+    #     return is_valid 
